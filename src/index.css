@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'helvetica neue';
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.parent{
+  min-height: 100vb;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  padding: 30px;
+}
+
+.card{
+  height: 400px;
+  width: 300px;
+  border: 1px solid white;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+   
+  
+}
+
+.card .top{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.top img{
+  padding: 2px;
+  margin: 5px;
+  height: 50px;
+  width: 55px;
+  border-radius: 50%;
+  border: 1px solid black;
+  object-fit: fill;
+
+}
+
+.top button{
+  align-items: center;
+  display: flex;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  padding: 4px 8px;
+  gap: 3px;
+  background-color: transparent;
+}
+
+.center{
+  margin-top: 20px;
+}
+.center span{
+  color: #585454;
+  font-size: small;
+  margin-left: 5px;
+  font-weight: 200;
+}
+.center h3{
+  font-size: xx-large;
+  font-weight: 5000;
+  color: rgb(217, 18, 131);
+  margin-bottom: 5px;
+}
+
+#f1{
+  background-color: #bbb9b9;
+  width: 78px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  
+}
+#f2{
+  background-color: #bbb9b9;
+  width: 100px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.dialog{
+  display: flex;
+  margin-top: 10px; 
+}
+
+.bottom{
+  border-top: 1px solid #dadada;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-top : 10px;
+}
+
+.bottom p{
+  color: #797777;
+  font-size: small;
+}
+
+.bottom button{
+  font-size: large;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+
+}
+
+
+
+
+/* Laptop / Small Computer */
+@media (max-width: 1200px) {
+  .parent {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .parent {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .parent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+}
